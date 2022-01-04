@@ -1,0 +1,25 @@
+{
+  "name": "babel-preset-rolo-backend-ts",
+  "version": "1.0.0",
+  "description": "Typscript Babel preset for the backend teams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolo-chat/babel-preset-rolo-backend-ts.git"
+  },
+  "author": "Rolo Innovation Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rolo-chat/babel-preset-rolo-backend-ts/issues"
+  },
+  "homepage": "https://github.com/rolo-chat/babel-preset-rolo-backend-ts#readme",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-plugin-istanbul": "^6.1.1"
+  }
+}
