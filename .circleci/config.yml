@@ -1,0 +1,29 @@
+version: 2.1
+
+executors:
+  node:
+    docker:
+      - image: cimg/node:16.2
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
+
+jobs:
+  build-publish:
+    executor: node
+    steps:
+      - checkout
+      - run: npm ci
+      - run: npm publish
+
+workflows:
+  version: 2
+  test_build_publish:
+    jobs:
+      - build-publish:
+          context: global
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v?[0-9]+\.[0-9]+\.[0-9]+(?:-(?:rc|beta|alpha)\.[0-9]+)?$/
