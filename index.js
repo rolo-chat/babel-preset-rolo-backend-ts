@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   presets: [
     "@babel/preset-typescript",
     [
@@ -30,4 +30,4 @@ module.exports = {
       plugins: ["istanbul"],
     },
   },
-};
+});
